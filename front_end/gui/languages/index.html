@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Languages</title>
+    <style>
+      /*
+      ----------------------------------------
+      Tantek Celik's Whitespace Reset
+          Author:    Tantek Celik, Shane Riley
+          Version:    (CC) 2010 Some Rights Reserved - <http://creativecommons.org/licenses/by/2.0>
+      Description:  Resets default styling of browsers to a common base
+      ----------------------------------------
+      */
+
+      ul, ol { list-style: none; }
+      h1, h2, h3, h4, h5, h6, pre, code { font-size: 1em; }
+      ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote,
+      fieldset, input, dl, dt, dd, figure, figcaption {
+        margin: 0;
+        padding: 0;
+      }
+      a img, :link img, :visited img, fieldset { border: none; }
+      address { font-style: normal; }
+      header, section, article, nav, footer, hgroup, details, summary, figure, main {
+        display: block;
+      }
+      mark {
+        color: inherit;
+        background-color: transparent;
+      }
+      abbr { border: none; }
+      summary::-webkit-details-marker { display: none; }
+
+      body {
+        background: green;
+        padding: 2rem;
+      }
+
+      h1 {
+        font-size: 32px;
+        text-align: center;
+        color: white;
+      }
+
+      #languages {
+        background: white;
+        margin: 1rem auto;
+        padding: 1rem 0;
+        width: 50%;
+        border-radius: 1rem;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin: 1rem;
+      }
+
+      p {
+        margin: 1rem;
+      }
+
+      .button {
+        margin: 1rem;
+        background-color: yellow;
+        width: 100px;
+        height: 30px;
+        vertical-align: middle;
+        border: solid;
+        border-radius: .5rem;
+        border-color: black;
+        font-weight: bold;
+        position: relative;
+        opacity: .6;
+        transition: .3s;
+        text-align: center;
+        padding-top: 10px;
+      }
+
+      .button:hover {
+        opacity: 1;
+      }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="javascripts/app.js"></script>
+    <script id="languages-template" type="text/x-handlebars">
+      {{#each items}}
+      <article id="{{name}}">
+        <h2 class="name">{{name}}</h2>
+        <div class="description-container">
+        {{> languageTemplate}}
+        </div>
+        <div class="button show-more">Show More
+        </div>
+      </article>
+      {{/each}}
+    </script>
+    <script id="language-template" type="text/x-handlebars">
+        <p class="description">{{description}}</p>
+    </script>
+  </head>
+
+  <body>
+    <h1>Programming Languages</h1>
+    <div id="languages">
+    </div>
+  </body>
+</html>

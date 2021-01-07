@@ -1,0 +1,57 @@
+body {
+  background: #eb4034;
+}
+form {
+  width: 1000px;
+  background: white;
+  margin: 20px auto;
+}
+
+dt {
+  width: 45%;
+  margin-bottom: 5px;
+
+}
+
+dd {
+ /* width: 40%; */
+ margin-bottom: 20px;
+ margin-left: 0px;
+}
+
+input {
+  width: 40%;
+  display: inline-block;
+  /* border: 1px solid green; */
+  padding: 10px;
+  border-radius: 3px;
+}
+
+#credit1,
+#credit2,
+#credit3,
+#credit4 {
+  width: 50px;
+}
+
+input.error {
+  border: solid red;
+}
+
+input.valid {
+  border: solid green;
+}
+
+.error_message {
+  color: red;
+  display: inline-block;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form_errors {
+  color: red;
+  margin: 10px;
+}

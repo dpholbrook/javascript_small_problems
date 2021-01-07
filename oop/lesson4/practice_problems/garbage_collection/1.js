@@ -1,0 +1,1 @@
+// JavaScript is garbage collected meaning that it autmatically allocates memory to store values and dealocates memory once those values are no longer needed.

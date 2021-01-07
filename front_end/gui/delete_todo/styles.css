@@ -1,0 +1,129 @@
+body {
+  background-color: green; 
+}
+
+#context-menu {
+  padding: 0;
+  background: black;
+  z-index: 7;
+  color: white;
+  font-size: 64;
+  position: absolute;
+  cursor: pointer;
+}
+
+#context-menu > div {
+  box-sizing: border-box;
+  padding: 2px 15px;
+  width: 100%;
+}
+
+#context-menu > div:hover {
+  background: white;
+  color: black;
+}
+
+#context-menu > p {
+  width: 100%;
+  color: green;
+}
+
+.todo {
+  background-color: white;
+  border-radius: 5px;
+  width: 500px;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+}
+
+.title {
+  display: inline-block;
+}
+
+#popup {
+  background-color: white;
+  border-radius: 5px;
+  width: 500px;
+  padding: 10px;
+  margin: 10px;
+  position: absolute;
+  z-index: 6;
+  top: 150px;
+  left: 50%;
+  margin-left: -250px;
+}
+
+#overlay {
+  position: absolute;
+  z-index: 5;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, .3);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: '';
+  transition: .3s;
+}
+
+#yes {
+  background-color: green;
+  position: absolute;
+  right: 50px;
+  bottom: 5px;
+}
+
+#no {
+  background-color: red;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+}
+
+/*delete button styles*/
+span.remove {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  transform: rotate(45deg);
+  right: 20px;
+  bottom: 25px;
+  cursor: pointer;
+}
+
+span.remove:hover {
+  width: 24px;
+  height: 24px;
+}
+
+span.remove:before, span.remove:after {
+  background: #ec5555;
+  content: "";
+  position: absolute;
+}
+span.remove:before {
+  height: 3px;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin-top: -1px;
+}
+span.remove:after {
+  width: 3px;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  margin-left: -1px;
+}
+
+
+

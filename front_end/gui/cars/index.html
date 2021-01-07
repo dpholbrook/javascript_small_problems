@@ -1,0 +1,94 @@
+<html>
+  <head>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
+  <script src="cars.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Buy Used Cars</h1>
+      <ul class="filters">
+        <li id="make_filter">
+        </li>
+        <li id="model_filter">
+        </li>
+        <li id="price_filter">
+        </li>
+        <li id="year_filter">
+        </li>
+        <li>
+          <button id='filter' type="button">Filter</button>
+        </li>
+      </ul>
+    </header>
+    <main> 
+    </main>
+    <script type='text/x-handlebars' id='carsTemplate'>
+    <section id='cars'>
+      {{#each cars}}
+      <figure class='car'>
+        <img src={{image}}/>
+        <h2>{{make}} {{model}}</h2>
+        <p>Year: {{year}}</p>
+        <p>Price: {{price}}</p>
+        <button type='submit'>Buy</button>
+      </figure>
+      {{/each}}
+    </section>
+    </script>
+    <!-- <script type='text/x-handlebars' id='filter-template'>
+      <ul class="filters">
+        {{> make-template}}
+        {{> model-template}}
+        {{> price-template}}
+        {{> year-template}}
+        <li>
+          <button id='filter' type="button">Filter</button>
+        </li>
+      </ul>
+    </script> -->
+    <script type='text/x-handlebars' id='make-template'>
+        <label for="make">Make<label>
+        <select name="make" id="make">
+          <option value="">All</option>
+          {{#each makes}}
+          <option value="{{.}}">{{.}}</option>
+          {{/each}}
+        </select>
+    </script>
+    <script type='text/x-handlebars' id='model-template'>
+        <label for="model">Model<label>
+        <select name="model" id="model">
+          <option value="">All</option>
+          {{#each models}}
+          <option value="{{.}}">{{.}}</option>
+          {{/each}}
+        </select>
+    </script>
+    <script type='text/x-handlebars' id='price-template'>
+        <label for="price">Price<label>
+        <select name="price" id="price">
+          <option value="">All</option>
+          {{#each prices}}
+          <option value="{{.}}">{{.}}</option>
+          {{/each}}
+        </select>
+    </script>
+    <script type='text/x-handlebars' id='year-template'>
+        <label for="year">Year<label>
+        <select name="year" id="year">
+          <option value="">All</option>
+          {{#each years}}
+          <option value="{{.}}">{{.}}</option>
+          {{/each}}
+        </select>
+    </script>
+  </body>
+</html>
+
+<!-- 
+We need each filter to render individually. 
+Create unique arrays for make model and year
+Those arrays populate the each template
+We call render filter and each filter 
+ -->

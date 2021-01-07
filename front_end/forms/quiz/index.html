@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js"></script>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>Quiz</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
+  <script type='text/x-handlebars' id='quiz_template'>
+    <form action="#" method="post" id='quiz'>
+      {{#each questions}}
+      <div class="question" data-id="{{id}}">
+        <p>Q{{id}}. {{description}}</p>
+        {{#each options}}
+          <!-- <label for="{{index}}">{{../id}}</label> -->
+          <div class="option">
+            <input name="{{../id}}" type="radio" value="{{.}}"/>
+            <label for="{{../id}}">{{.}}</label>
+          </div>
+        {{/each}}
+        <p class="message"><p>
+      </div>
+      {{/each}}
+      <div id="actions">
+        <input id="submitForm" type="submit"/>
+        <input id="resetForm" value="reset" type="button"/>
+      </div>
+    </form>
+  </script>
+    <!-- <script type='text/x-handlebars' id='options-template'>
+      {{#each options}}
+      <label for=""></label>
+      <input type="radio" id="{{option}}" name="" value="">
+      {{/each}}
+    </script> -->
+
+
+
+<!-- 
+  for each question 
+  get id and description
+  get all of the options
+ -->
+</head>
+<body>
+  <h1>Multiple Choice Quiz</h1>
+  <!-- <p>Who is the author?</p>
+  <label for="Q1">Q1</label>
+  <input type="radio" id="Q1" name="Q1" value="Q1"> -->
+
+  <!-- <label for="{{index}}">{{../id}}</label>
+  <input type="radio" id="{{index}}" name="{{index}}" value="{{index}}"> -->
+</body>
+</html>

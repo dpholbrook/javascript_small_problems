@@ -1,0 +1,49 @@
+body {
+ background: #1e8a2b;
+ font-family: sans-serif;
+}
+
+main {
+  margin: 20px auto;
+  height: 500px;
+  width: 400px;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#screen {
+  height: 30%;
+  position: relative;
+  border: 1px solid black;
+}
+
+#operation {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+
+#entry {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+}
+
+#buttons {
+  height: 70%;
+}
+
+#buttons > a {
+  text-decoration: none;
+  color: black;
+  margin-top: 3px;
+  background: grey;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 19%;
+  width: 24%;
+  border-radius: 3px;
+  text-align: center;
+  padding-top: 25px;
+}
